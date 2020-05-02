@@ -1,0 +1,7 @@
+sudo usermod -aG docker
+
+docker pull php:7.3-apache
+
+docker run -dit --name php -p 8080:80 -v "$PWD":/var/www/html php:7.3-apache
+
+chmod 777 -R nome_do_diretório
